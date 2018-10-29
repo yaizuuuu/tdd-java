@@ -1,10 +1,12 @@
+package money;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CalcTest {
+class DollarTest {
 
     @BeforeEach
     void setUp() {
@@ -15,8 +17,9 @@ class CalcTest {
     }
 
     @Test
-    void sum() {
-        Calc calc = new Calc();
-        assertEquals(3, calc.sum(2, 1));
+    public void testMultiplication() {
+        Dollar five = new Dollar(5);
+        five.times(2);
+        assertEquals(10, five.amount);
     }
 }
